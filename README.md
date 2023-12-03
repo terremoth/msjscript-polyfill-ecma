@@ -35,6 +35,7 @@ So the goal is to implement:
 - [ ] Audio API
 - [ ] Intl API
 - [ ] Typed Arrays
+- [ ] ArrayBuffer, SharedArrayBuffer, DataView
 - [ ] "open" function to call web browser
 - [X] setInterval / setTimeout 
 - [ ] clearInterval / clearTimeout functions
@@ -53,3 +54,4 @@ Things that probably won't be possible to implement:
 - of keyword
 - scheduler
 - sockets/websockets
+- Generator, yield
