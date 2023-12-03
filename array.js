@@ -70,3 +70,4 @@ Array.prototype.forEach = function (callBack) {
         callBack(this[i]);
     }
 };
+

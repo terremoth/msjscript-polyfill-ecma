@@ -4,7 +4,6 @@ Microsoft JScript version of JavaScript with Polyfills for common functions and 
 Microsoft JScript (5.8, today) only provides these objects, with fewer functions than common JS today:
 - Object
 - WScript
-- WshShell
 - Math
 - String
 - Boolean
@@ -21,11 +20,10 @@ Microsoft JScript (5.8, today) only provides these objects, with fewer functions
 
 So the goal is to implement:
 - [X] console
-- [ ] JSON
-- [ ] XmlHttoRequest
+- [X] JSON
+- [X] XmlHttoRequest
 - [ ] probably alert, prompt and confirm functions are possible through Wscript?
-- [ ] Request, Response and fetch (being wrappers to xmlhttprequest)
-- [x] require
+- [X] Request, Response and fetch (being wrappers to xmlhttprequest)
 - [ ] escape and unescape functions
 - [ ] WeakMap
 - [ ] Proxy
@@ -36,12 +34,16 @@ So the goal is to implement:
 - [ ] Crypto API
 - [ ] Audio API
 - [ ] Intl API
+- [ ] Typed Arrays
 - [ ] "open" function to call web browser
-- [ ] setInterval / setTimeout & clearInterval / clearTimeout functions
-- [ ] atob / btoa functions
-- [ ] encodeURI/encodeURIComponent and decodeURI/decodeURIComponent
+- [X] setInterval / setTimeout 
+- [ ] clearInterval / clearTimeout functions
+- [X] atob / btoa functions
 - [ ] File and FileSystem API
-- [ ] Add other already defined object functions polyfills that aren't present
+- [X] ES5 functions polyfills
+- [X] ES6 functions polyfills
+- [X] ES2016 functions polyfills
+- [X] ES2017 functions polyfills
 
 Things that probably won't be possible to implement:
 - let, const

@@ -8,3 +8,4 @@ function setInterval(code, delay) {
         setTimeout(code, delay);
     }
 }
+

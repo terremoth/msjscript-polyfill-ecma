@@ -1,4 +1,5 @@
 var console = {};
+
 console.__handler__ = function(data) {
     var wsh = new ActiveXObject("wScript.shell");
     var ps = wsh.exec('powershell.exe -noProfile -executionPolicy bypass -c ""exit""'); 
@@ -29,3 +30,4 @@ console.info = function(data) {
 console.debug = function(data) {
     this.__handler__('\x1B[3m'+data+'\x1B[0m');
 };
+

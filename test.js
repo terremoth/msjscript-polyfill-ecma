@@ -1,12 +1,8 @@
-eval((new ActiveXObject("Scripting.FileSystemObject")).OpenTextFile('require.js', 1).ReadAll());
-// eval((new ActiveXObject("Scripting.FileSystemObject")).OpenTextFile("console.js", 1).ReadAll());
-
-import("base64.js");
+eval((new ActiveXObject("Scripting.FileSystemObject")).OpenTextFile('polyfill.js', 1).ReadAll());
 
 
+console.log(atob("shit"));
 
-
-WScript.Echo(btoa('fuck'));
 // require("array.js");
 // require("object.js");
 
@@ -34,12 +30,12 @@ WScript.Echo(btoa('fuck'));
 
 
 
-function Animal() { }
-Animal.prototype.eat = function() {
-  return "nom nom nom";
-};
+// function Animal() { }
+// Animal.prototype.eat = function() {
+//   return "nom nom nom";
+// };
 
-function Bird() { }
+// function Bird() { }
 
 // Bird.prototype = Object.create(Animal.prototype);
 
@@ -60,6 +56,6 @@ var myArr = ['a', 'b', 'c', 'd'];
 // console.log(myArr.indexOf('b'))
 
 
-console.log(Object.values(myobj));
+// console.log(Object.values(myobj));
 
 // console.log(Object.values(myobj));

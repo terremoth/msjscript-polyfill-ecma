@@ -1,6 +1,6 @@
-Number.EPSILON = Math.pow(2, -52);
-Number.MAX_SAFE_INTEGER = 9007199254740991; // Math.pow(2, 53) - 1;
+Number.MAX_SAFE_INTEGER =  9007199254740991; // Math.pow(2, 53) - 1;
 Number.MIN_SAFE_INTEGER = -9007199254740991; // -(Math.pow(2, 53) - 1)
+Number.EPSILON = Math.pow(2, -52);
 
 Number.parseInt = parseInt;
 Number.parseFloat = parseFloat;
@@ -22,3 +22,4 @@ Number.isNaN = function isNaN(input) {
 Number.isSafeInteger = function (value) {
     return Number.isInteger(value) && Math.abs(value) <= Number.MAX_SAFE_INTEGER;
 };
+

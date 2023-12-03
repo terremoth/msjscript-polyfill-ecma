@@ -76,3 +76,4 @@ Object.values = function(obj) {
 		return result;
 	}
 };
+
