@@ -44,35 +44,35 @@ Object.keys = (function () {
 /**
  * MIT license
  */
-// Object.values = function(obj) {
+Object.values = function(obj) {
 
-// 	var allowedTypes = ["[object String]", "[object Object]", "[object Array]", "[object Function]"];
-// 	var objType = Object.prototype.toString.call(obj);
+	var allowedTypes = ["[object String]", "[object Object]", "[object Array]", "[object Function]"];
+	var objType = Object.prototype.toString.call(obj);
 	
-//     if (obj === null || typeof obj === "undefined") {
-//         WScript.Echo("1111111111111111");
-// 		throw new TypeError("Cannot convert undefined or null to object");
-// 	} else if(!~allowedTypes.indexOf(objType)) {
-//         WScript.Echo("2222222222");
-// 		return [];
-// 	} else {WScript.Echo("333333333333333333");
-// 		// if ES6 is supported
-// 		if (Object.keys) {
-//             WScript.Echo("entrou1");
-// 			return Object.keys(obj).map(function (key) {
-// 				return obj[key];
-// 			});
-// 		} else {
-//             WScript.Echo("entrou 2");
-//         }
+    if (obj === null || typeof obj === "undefined") {
+        WScript.Echo("1111111111111111");
+		throw new TypeError("Cannot convert undefined or null to object");
+	} else if(!~allowedTypes.indexOf(objType)) {
+        WScript.Echo("2222222222");
+		return [];
+	} else {WScript.Echo("333333333333333333");
+		// if ES6 is supported
+		if (Object.keys) {
+            WScript.Echo("entrou1");
+			return Object.keys(obj).map(function (key) {
+				return obj[key];
+			});
+		} else {
+            WScript.Echo("entrou 2");
+        }
 		
-// 		var result = [];
-// 		for (var prop in obj) {
-// 			if (obj.hasOwnProperty(prop)) {
-// 				result.push(obj[prop]);
-// 			}
-// 		}
+		var result = [];
+		for (var prop in obj) {
+			if (obj.hasOwnProperty(prop)) {
+				result.push(obj[prop]);
+			}
+		}
 		
-// 		return result;
-// 	}
-// };
+		return result;
+	}
+};

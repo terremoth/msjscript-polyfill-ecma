@@ -4,6 +4,7 @@ Microsoft JScript version of JavaScript with Polyfills for common functions and 
 Microsoft JScript (5.8, today) only provides these objects, with fewer functions than common JS today:
 - Object
 - WScript
+- WshShell
 - Math
 - String
 - Boolean
@@ -16,16 +17,19 @@ Microsoft JScript (5.8, today) only provides these objects, with fewer functions
 - VBArray
 - Enumarator
 - Global
+- ActiveXObject
 
 So the goal is to implement:
-- [ ] console
+- [X] console
 - [ ] JSON
 - [ ] XmlHttoRequest
 - [ ] probably alert, prompt and confirm functions are possible through Wscript?
 - [ ] Request, Response and fetch (being wrappers to xmlhttprequest)
-- [ ] require
+- [x] require
+- [ ] escape and unescape functions
 - [ ] WeakMap
 - [ ] Proxy
+- [ ] Symbol
 - [ ] Reflect 
 - [ ] Map, Set, WeakMap and WeakSet
 - [ ] BigNum/BigInteger
