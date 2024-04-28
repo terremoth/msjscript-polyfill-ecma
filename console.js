@@ -1,4 +1,4 @@
-var console = {};
+this.console = {};
 
 console.__handler__ = function(data) {
     var wsh = new ActiveXObject("wScript.shell");

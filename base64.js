@@ -1,10 +1,10 @@
-function __b64__() {
+this.__b64__ = function() {
     return "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
 }
         // Regular expression to check formal correctness of base64 encoded strings
-var __b64re__ = /^(?:[A-Za-z\d+\/]{4})*?(?:[A-Za-z\d+\/]{2}(?:==)?|[A-Za-z\d+\/]{3}=?)?$/;
+this.__b64re__ = /^(?:[A-Za-z\d+\/]{4})*?(?:[A-Za-z\d+\/]{2}(?:==)?|[A-Za-z\d+\/]{3}=?)?$/;
 
-function btoa(string) {
+this.btoa = function(string) {
     string = String(string);
     var bitmap, a, b, c,
         result = "", i = 0,
@@ -25,7 +25,7 @@ function btoa(string) {
     return rest ? result.slice(0, rest - 3) + "===".substring(rest) : result;
 }
 
-function atob(string) {
+this.atob = function(string) {
     // atob can work with strings with whitespaces, even inside the encoded part,
     // but only \t, \n, \f, \r and ' ', which can be stripped.
     string = String(string).replace(/[\t\n\f\r ]+/g, "");
@@ -36,8 +36,8 @@ function atob(string) {
     string += "==".slice(2 - (string.length & 3));
     var bitmap, result = "", r1, r2, i = 0;
     for (; i < string.length;) {
-        bitmap = __b64__.indexOf(string.charAt(i++)) << 18 | __b64__.indexOf(string.charAt(i++)) << 12
-                | (r1 = __b64__.indexOf(string.charAt(i++))) << 6 | (r2 = __b64__.indexOf(string.charAt(i++)));
+        bitmap = __b64__().indexOf(string.charAt(i++)) << 18 | __b64__().indexOf(string.charAt(i++)) << 12
+                | (r1 = __b64__().indexOf(string.charAt(i++))) << 6 | (r2 = __b64__().indexOf(string.charAt(i++)));
 
         result += r1 === 64 ? String.fromCharCode(bitmap >> 16 & 255)
                 : r2 === 64 ? String.fromCharCode(bitmap >> 16 & 255, bitmap >> 8 & 255)

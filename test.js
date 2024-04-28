@@ -1,7 +1,31 @@
-eval((new ActiveXObject("Scripting.FileSystemObject")).OpenTextFile('polyfill.js', 1).ReadAll());
+function require(file) {eval((new ActiveXObject("Scripting.FileSystemObject")).OpenTextFile(file+'.js', 1).ReadAll());}require('polyfill');
+// require('console');
+require('console');
+
+// function echo (data) {return WScript.Echo(data);}
+// var print = echo;
+function xxx(y=1) {
+    return y ;
+}
+var obj = {
+    prop: function() {},
+    foo: 'bar'
+  };
+  
+  // New properties may be added, existing properties
+  // may be changed or removed.
+  obj.foo = 'baz';
+  obj.lumpy = 'woof';
+  delete obj.prop;
+  
+  var o = Object.seal(obj);
 
 
-console.log(atob("shit"));
+// console.log(animals.reverse());
+// console.log(animals.sort());
+// push
+
+// console.error(atob(btoa('stayin alive')));
 
 // require("array.js");
 // require("object.js");
